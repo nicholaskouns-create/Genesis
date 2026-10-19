@@ -1,0 +1,147 @@
+{
+ "datasets": {
+  "BNCI2014-001": {
+   "description": "9 healthy participants, BCI Competition IV 2a, left- versus right-hand motor imagery",
+   "n_subjects": 9,
+   "auc": {
+    "Tangent space + LR": {
+     "mean": 0.8629327416419983,
+     "sd": 0.13799843192100525
+    },
+    "Tangent space": {
+     "mean": 0.8550869226455688,
+     "sd": 0.13023613393306732
+    },
+    "Tangent space + fractal shape": {
+     "mean": 0.8251473903656006,
+     "sd": 0.1589592546224594
+    },
+    "Band power": {
+     "mean": 0.7523658275604248,
+     "sd": 0.18233400583267212
+    },
+    "Band power + fractal shape": {
+     "mean": 0.6639304757118225,
+     "sd": 0.19830837845802307
+    },
+    "Genesis": {
+     "mean": 0.6234580874443054,
+     "sd": 0.19368140399456024
+    }
+   },
+   "comparisons": [
+    {
+     "title": "H4 \u00b7 fractal shape adds to band power",
+     "with_shape": "Band power + fractal shape",
+     "without_shape": "Band power",
+     "mean_auc_difference": -0.08843535929918289,
+     "ci95": [
+      -0.12128938734531403,
+      -0.05657196789979935
+     ],
+     "p_one_sided": 0.998046875,
+     "standardized_effect": -1.6765215396881104,
+     "subjects_improved": 0,
+     "n": 9,
+     "alpha_bonferroni": 0.025,
+     "supported": false
+    },
+    {
+     "title": "H5 \u00b7 fractal shape adds to tangent space",
+     "with_shape": "Tangent space + fractal shape",
+     "without_shape": "Tangent space",
+     "mean_auc_difference": -0.029939519241452217,
+     "ci95": [
+      -0.05096018686890602,
+      -0.011107338592410088
+     ],
+     "p_one_sided": 0.986328125,
+     "standardized_effect": -0.9037793874740601,
+     "subjects_improved": 3,
+     "n": 9,
+     "alpha_bonferroni": 0.025,
+     "supported": false
+    }
+   ]
+  },
+  "Liu2024": {
+   "description": "50 acute stroke patients, left- versus right-hand motor imagery (Liu et al., Scientific Data 2024)",
+   "n_subjects": 50,
+   "auc": {
+    "Tangent space": {
+     "mean": 0.5642499923706055,
+     "sd": 0.16594676673412323
+    },
+    "Tangent space + fractal shape": {
+     "mean": 0.5525000095367432,
+     "sd": 0.17958641052246094
+    },
+    "Band power": {
+     "mean": 0.5522499680519104,
+     "sd": 0.1630522459745407
+    },
+    "Tangent space + LR": {
+     "mean": 0.550000011920929,
+     "sd": 0.1779811680316925
+    },
+    "Genesis": {
+     "mean": 0.5217499732971191,
+     "sd": 0.17419293522834778
+    },
+    "Band power + fractal shape": {
+     "mean": 0.5167499780654907,
+     "sd": 0.1639089286327362
+    }
+   },
+   "comparisons": [
+    {
+     "title": "H4 \u00b7 fractal shape adds to band power",
+     "with_shape": "Band power + fractal shape",
+     "without_shape": "Band power",
+     "mean_auc_difference": -0.03550000116229057,
+     "ci95": [
+      -0.07474999129772186,
+      0.0037499999161809683
+     ],
+     "p_one_sided": 0.9265258312225342,
+     "standardized_effect": -0.24993500113487244,
+     "subjects_improved": 19,
+     "n": 50,
+     "alpha_bonferroni": 0.025,
+     "supported": false
+    },
+    {
+     "title": "H5 \u00b7 fractal shape adds to tangent space",
+     "with_shape": "Tangent space + fractal shape",
+     "without_shape": "Tangent space",
+     "mean_auc_difference": -0.011749999597668648,
+     "ci95": [
+      -0.03824999928474426,
+      0.014006254263222218
+     ],
+     "p_one_sided": 0.6436651945114136,
+     "standardized_effect": -0.1225510686635971,
+     "subjects_improved": 25,
+     "n": 50,
+     "alpha_bonferroni": 0.025,
+     "supported": false
+    }
+   ]
+  }
+ },
+ "meta": {
+  "finished": "2026-10-19 22:11 UTC",
+  "seconds": 422.9,
+  "commit": "125c5a6",
+  "moabb": "1.7.2",
+  "mne": "1.13.2",
+  "sklearn": "1.9.1",
+  "python": "3.12.15",
+  "paradigm": "LeftRightImagery 8-32 Hz, resampled to 128 Hz",
+  "evaluation": "WithinSessionEvaluation, 5-fold, random_state 47",
+  "omega_c": 0.376,
+  "alpha": 0.05,
+  "primary_dataset": "Liu2024",
+  "suite": "shape-on-power"
+ }
+}

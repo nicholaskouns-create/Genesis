@@ -1,0 +1,73 @@
+dataset,index,pipe1,pipe2,p,smd,nsub
+Liu2024,0,Band power,Band power,0.0,0.0,50
+Liu2024,1,Band power + fractal shape,Band power,0.9265258312225342,-0.24993500113487244,50
+Liu2024,2,Genesis,Band power,0.8566414713859558,-0.16564330458641052,50
+Liu2024,3,Tangent space,Band power,0.3076590299606323,0.08173318207263947,50
+Liu2024,4,Tangent space + LR,Band power,0.6324440836906433,-0.017420604825019836,50
+Liu2024,5,Tangent space + fractal shape,Band power,0.4485444724559784,0.001677286927588284,50
+Liu2024,6,Band power,Band power + fractal shape,0.07347413897514343,0.24993500113487244,50
+Liu2024,7,Band power + fractal shape,Band power + fractal shape,0.0,0.0,50
+Liu2024,8,Genesis,Band power + fractal shape,0.43670669198036194,0.065453439950943,50
+Liu2024,9,Tangent space,Band power + fractal shape,0.014214884489774704,0.2885175347328186,50
+Liu2024,10,Tangent space + LR,Band power + fractal shape,0.106827512383461,0.19647708535194397,50
+Liu2024,11,Tangent space + fractal shape,Band power + fractal shape,0.004630839917808771,0.32349202036857605,50
+Liu2024,12,Band power,Genesis,0.1433585286140442,0.16564330458641052,50
+Liu2024,13,Band power + fractal shape,Genesis,0.5632933378219604,-0.065453439950943,50
+Liu2024,14,Genesis,Genesis,0.0,0.0,50
+Liu2024,15,Tangent space,Genesis,0.0603301078081131,0.22798359394073486,50
+Liu2024,16,Tangent space + LR,Genesis,0.19375008344650269,0.13814817368984222,50
+Liu2024,17,Tangent space + fractal shape,Genesis,0.07455042749643326,0.22349658608436584,50
+Liu2024,18,Band power,Tangent space,0.6923409700393677,-0.08173318207263947,50
+Liu2024,19,Band power + fractal shape,Tangent space,0.9857851266860962,-0.2885175347328186,50
+Liu2024,20,Genesis,Tangent space,0.9396699070930481,-0.22798359394073486,50
+Liu2024,21,Tangent space,Tangent space,0.0,0.0,50
+Liu2024,22,Tangent space + LR,Tangent space,0.9379405975341797,-0.15802700817584991,50
+Liu2024,23,Tangent space + fractal shape,Tangent space,0.6436651945114136,-0.1225510686635971,50
+Liu2024,24,Band power,Tangent space + LR,0.3675559163093567,0.017420604825019836,50
+Liu2024,25,Band power + fractal shape,Tangent space + LR,0.8931725025177002,-0.19647708535194397,50
+Liu2024,26,Genesis,Tangent space + LR,0.8062499165534973,-0.13814817368984222,50
+Liu2024,27,Tangent space,Tangent space + LR,0.06205938011407852,0.15802700817584991,50
+Liu2024,28,Tangent space + LR,Tangent space + LR,0.0,0.0,50
+Liu2024,29,Tangent space + fractal shape,Tangent space + LR,0.2920452654361725,0.02144482173025608,50
+Liu2024,30,Band power,Tangent space + fractal shape,0.5514554977416992,-0.001677286927588284,50
+Liu2024,31,Band power + fractal shape,Tangent space + fractal shape,0.9953691363334656,-0.32349202036857605,50
+Liu2024,32,Genesis,Tangent space + fractal shape,0.925449550151825,-0.22349658608436584,50
+Liu2024,33,Tangent space,Tangent space + fractal shape,0.35633477568626404,0.1225510686635971,50
+Liu2024,34,Tangent space + LR,Tangent space + fractal shape,0.7079547643661499,-0.02144482173025608,50
+Liu2024,35,Tangent space + fractal shape,Tangent space + fractal shape,0.0,0.0,50
+BNCI2014-001,0,Band power,Band power,0.998046875,0.0,9
+BNCI2014-001,1,Band power + fractal shape,Band power,0.998046875,-1.6765215396881104,9
+BNCI2014-001,2,Genesis,Band power,0.998046875,-1.4154481887817383,9
+BNCI2014-001,3,Tangent space,Band power,0.001953125,1.6748147010803223,9
+BNCI2014-001,4,Tangent space + LR,Band power,0.001953125,1.793578863143921,9
+BNCI2014-001,5,Tangent space + fractal shape,Band power,0.001953125,1.9061322212219238,9
+BNCI2014-001,6,Band power,Band power + fractal shape,0.001953125,1.6765215396881104,9
+BNCI2014-001,7,Band power + fractal shape,Band power + fractal shape,0.998046875,0.0,9
+BNCI2014-001,8,Genesis,Band power + fractal shape,0.974609375,-0.6877388954162598,9
+BNCI2014-001,9,Tangent space,Band power + fractal shape,0.001953125,2.065945625305176,9
+BNCI2014-001,10,Tangent space + LR,Band power + fractal shape,0.001953125,2.130134344100952,9
+BNCI2014-001,11,Tangent space + fractal shape,Band power + fractal shape,0.001953125,2.216715097427368,9
+BNCI2014-001,12,Band power,Genesis,0.001953125,1.4154481887817383,9
+BNCI2014-001,13,Band power + fractal shape,Genesis,0.02734375,0.6877388954162598,9
+BNCI2014-001,14,Genesis,Genesis,0.998046875,0.0,9
+BNCI2014-001,15,Tangent space,Genesis,0.001953125,1.9667153358459473,9
+BNCI2014-001,16,Tangent space + LR,Genesis,0.001953125,1.9302763938903809,9
+BNCI2014-001,17,Tangent space + fractal shape,Genesis,0.001953125,1.8830147981643677,9
+BNCI2014-001,18,Band power,Tangent space,0.998046875,-1.6748147010803223,9
+BNCI2014-001,19,Band power + fractal shape,Tangent space,0.998046875,-2.065945625305176,9
+BNCI2014-001,20,Genesis,Tangent space,0.998046875,-1.9667153358459473,9
+BNCI2014-001,21,Tangent space,Tangent space,0.998046875,0.0,9
+BNCI2014-001,22,Tangent space + LR,Tangent space,0.08984375,0.5037901997566223,9
+BNCI2014-001,23,Tangent space + fractal shape,Tangent space,0.986328125,-0.9037793874740601,9
+BNCI2014-001,24,Band power,Tangent space + LR,0.998046875,-1.793578863143921,9
+BNCI2014-001,25,Band power + fractal shape,Tangent space + LR,0.998046875,-2.130134344100952,9
+BNCI2014-001,26,Genesis,Tangent space + LR,0.998046875,-1.9302763938903809,9
+BNCI2014-001,27,Tangent space,Tangent space + LR,0.912109375,-0.5037901997566223,9
+BNCI2014-001,28,Tangent space + LR,Tangent space + LR,0.998046875,0.0,9
+BNCI2014-001,29,Tangent space + fractal shape,Tangent space + LR,0.998046875,-1.1558271646499634,9
+BNCI2014-001,30,Band power,Tangent space + fractal shape,0.998046875,-1.9061322212219238,9
+BNCI2014-001,31,Band power + fractal shape,Tangent space + fractal shape,0.998046875,-2.216715097427368,9
+BNCI2014-001,32,Genesis,Tangent space + fractal shape,0.998046875,-1.8830147981643677,9
+BNCI2014-001,33,Tangent space,Tangent space + fractal shape,0.015625,0.9037793874740601,9
+BNCI2014-001,34,Tangent space + LR,Tangent space + fractal shape,0.001953125,1.1558271646499634,9
+BNCI2014-001,35,Tangent space + fractal shape,Tangent space + fractal shape,0.998046875,0.0,9
