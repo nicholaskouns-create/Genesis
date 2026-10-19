@@ -45,19 +45,27 @@ jobs:
           path: ~/mne_data
           key: eeg-liu2024-bnci2014_001-v1
 
-      - name: Run the pre-registered benchmark
-        run: python -m benchmark.run --out results
+      - name: Pre-registered benchmark, H1-H3 (skipped once its results are committed)
+        shell: bash
+        run: test -f results/summary.json || python -m benchmark.run --out results
+
+      - name: Follow-up, H4-H5 - does fractal shape add anything on top of power? (skipped once committed)
+        shell: bash
+        run: test -f results/shape-on-power/summary.json || python -m benchmark.run --suite shape-on-power --out results/shape-on-power
 
       - name: Summary
         if: always()
         shell: bash
-        run: cat results/summary.md >> "$GITHUB_STEP_SUMMARY" 2>/dev/null || echo "The benchmark did not finish." >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          for f in results/summary.md results/shape-on-power/summary.md; do
+            if [ -f "$f" ]; then cat "$f" >> "$GITHUB_STEP_SUMMARY"; echo >> "$GITHUB_STEP_SUMMARY"; fi
+          done
 
       - name: Commit the results to this branch
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add results/results.csv results/stats.csv results/gate.csv results/summary.json results/summary.md
+          git add results
           git commit -m "Benchmark results for ${GITHUB_SHA::7}" || exit 0
           git push

@@ -8,8 +8,10 @@ decoders that brain-computer interfaces use today.
 """
 from .coherence import OMEGA_C, CoherenceProjection, contraction_power, fisher_scores
 from .fractal import FractalIntentSignature, correlation_dimension, signature_names
-from .pipelines import BASELINES, GENESIS, SFREQ, build_pipelines, genesis_pipeline
+from .pipelines import BASELINES, FOLLOWUP_PAIRS, GENESIS, SFREQ, build_followup_pipelines, build_pipelines, genesis_pipeline
+from .power import BandPower
 
 __all__ = ["OMEGA_C", "CoherenceProjection", "contraction_power", "fisher_scores", "FractalIntentSignature",
-           "correlation_dimension", "signature_names", "BASELINES", "GENESIS", "SFREQ", "build_pipelines", "genesis_pipeline"]
+           "correlation_dimension", "signature_names", "BASELINES", "FOLLOWUP_PAIRS", "GENESIS", "SFREQ",
+           "build_followup_pipelines", "build_pipelines", "genesis_pipeline", "BandPower"]
 __version__ = "0.1.0"

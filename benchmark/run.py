@@ -1,13 +1,14 @@
 """Run the Genesis benchmark and write the results.
 
-    python -m benchmark.run                                   # the pre-registered run (Liu2024, BNCI2014_001)
-    python -m benchmark.run --datasets fake --subjects 3      # plumbing check, no download
+    python -m benchmark.run                                            # pre-registered H1-H3 (Liu2024, BNCI2014_001)
+    python -m benchmark.run --suite shape-on-power --out results/shape-on-power   # follow-up H4-H5
+    python -m benchmark.run --datasets fake                            # plumbing check, no download
 
 Outputs in --out (default results/):
     results.csv   MOABB within-session ROC-AUC, one row per subject x session x decoder
     stats.csv     MOABB paired statistics per dataset (one-sided p for pipe1 > pipe2, standardized effect)
-    gate.csv      per-subject decoding accuracy of trials that pass / fail the occupancy gate
-    summary.json  the verdict on H1-H3 with every number behind it
+    gate.csv      per-subject decoding accuracy of trials that pass / fail the occupancy gate (H3 only)
+    summary.json  the verdicts with every number behind them
     summary.md    the same in words
 """
 from __future__ import annotations
@@ -31,16 +32,19 @@ from scipy.stats import wilcoxon
 from sklearn.base import clone
 from sklearn.model_selection import StratifiedKFold
 
-from genesis import BASELINES, GENESIS, OMEGA_C, SFREQ, build_pipelines
+from genesis import BASELINES, FOLLOWUP_PAIRS, GENESIS, OMEGA_C, SFREQ, build_followup_pipelines, build_pipelines
 
 ALPHA = 0.05
 PRIMARY = "Liu2024"
 FRACTION_RIVALS = ("Genesis, fraction 0.25", "Genesis, fraction 0.50", "Genesis, no projection")
 DESCRIPTIONS = {
     "Liu2024": "50 acute stroke patients, left- versus right-hand motor imagery (Liu et al., Scientific Data 2024)",
+    "BNCI2014-001": "9 healthy participants, BCI Competition IV 2a, left- versus right-hand motor imagery",
     "BNCI2014_001": "9 healthy participants, BCI Competition IV 2a, left- versus right-hand motor imagery",
     "FakeDataset": "synthetic noise (plumbing check only)",
 }
+FOLLOWUP_TITLES = {"Band power": "H4 · fractal shape adds to band power",
+                   "Tangent space": "H5 · fractal shape adds to tangent space"}
 
 
 def make_dataset(name: str):
@@ -153,8 +157,57 @@ def write_summary(v: dict, meta: dict, path: Path):
     path.write_text("\n".join(lines) + "\n")
 
 
+def followup_verdicts(results: pd.DataFrame, stats: pd.DataFrame) -> dict:
+    """H4-H5: each pair differs only by the fractal signature; one-sided paired test, Bonferroni over the pairs."""
+    out = {"datasets": {}}
+    per_subject = results.groupby(["dataset", "pipeline", "subject"]).score.mean().reset_index()
+    alpha = ALPHA / len(FOLLOWUP_PAIRS)
+    for code, g in per_subject.groupby("dataset"):
+        ds = "FakeDataset" if str(code).startswith("FakeDataset") else str(code)
+        wide = g.pivot(index="subject", columns="pipeline", values="score")
+        table = g.groupby("pipeline").score.agg(["mean", "std"]).sort_values("mean", ascending=False)
+        st = stats[stats.dataset == code]
+        rng = np.random.default_rng(47)
+        comps = []
+        for with_shape, without in FOLLOWUP_PAIRS:
+            diff = (wide[with_shape] - wide[without]).to_numpy()
+            boot = rng.choice(diff, size=(10000, diff.size), replace=True).mean(axis=1)
+            row = st[(st.pipe1 == with_shape) & (st.pipe2 == without)]
+            p = float(row.p.iloc[0]) if len(row) else float("nan")
+            comps.append({"title": FOLLOWUP_TITLES[without], "with_shape": with_shape, "without_shape": without,
+                          "mean_auc_difference": float(diff.mean()), "ci95": [float(np.percentile(boot, 2.5)), float(np.percentile(boot, 97.5))],
+                          "p_one_sided": p, "standardized_effect": float(row.smd.iloc[0]) if len(row) else float("nan"),
+                          "subjects_improved": int((diff > 0).sum()), "n": int(diff.size), "alpha_bonferroni": alpha,
+                          "supported": bool(p < alpha and diff.mean() > 0)})
+        out["datasets"][ds] = {"description": DESCRIPTIONS.get(ds, ds), "n_subjects": int(g.subject.nunique()),
+                               "auc": {p: {"mean": float(r["mean"]), "sd": float(r["std"]) if np.isfinite(r["std"]) else None} for p, r in table.iterrows()},
+                               "comparisons": comps}
+    return out
+
+
+def write_followup_summary(v: dict, meta: dict, path: Path):
+    lines = ["# Does fractal shape add anything on top of power?", "",
+             f"Run {meta['finished']} · commit `{meta['commit']}` · MOABB {meta['moabb']} · MNE {meta['mne']} · scikit-learn {meta['sklearn']} · Python {meta['python']}",
+             "", "Each pair differs only by the fractal intent signature: same channels, bands, standardization and shrinkage LDA. "
+             "Score: within-session ROC-AUC, 5-fold cross-validation per subject and session (0.5 is chance).", ""]
+    for ds, d in v["datasets"].items():
+        lines += [f"## {ds}", "", d["description"] + f" · {d['n_subjects']} subjects", "", "| decoder | ROC-AUC (mean ± sd over subjects) |", "|---|---|"]
+        for p, s in d["auc"].items():
+            sd = f" ± {s['sd']:.3f}" if s["sd"] is not None else ""
+            lines.append(f"| {p} | {s['mean']:.3f}{sd} |")
+        for c in d["comparisons"]:
+            verdict = "**supported**" if c["supported"] else "**not supported**"
+            lines += ["", f"**{c['title']}**: {verdict} (one-sided, Bonferroni α = {c['alpha_bonferroni']:.3f})", "",
+                      f"- {c['with_shape']} minus {c['without_shape']}: ΔAUC = {c['mean_auc_difference']:+.3f} "
+                      f"(95% CI {c['ci95'][0]:+.3f} to {c['ci95'][1]:+.3f}), p = {c['p_one_sided']:.4g}, "
+                      f"standardized effect = {c['standardized_effect']:+.2f}, better in {c['subjects_improved']} of {c['n']} subjects"]
+        lines.append("")
+    path.write_text("\n".join(lines) + "\n")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
+    ap.add_argument("--suite", choices=("preregistered", "shape-on-power"), default="preregistered")
     ap.add_argument("--datasets", default="Liu2024,BNCI2014_001")
     ap.add_argument("--subjects", type=int, default=None, help="use only the first N subjects of each dataset")
     ap.add_argument("--out", default="results")
@@ -173,12 +226,15 @@ def main(argv=None):
     paradigm = LeftRightImagery(fmin=8, fmax=32, resample=SFREQ)
     evaluation = WithinSessionEvaluation(paradigm=paradigm, datasets=datasets, overwrite=True, random_state=47,
                                          hdf5_path=str(out / "moabb-cache"))
-    results = evaluation.process(build_pipelines(n_jobs=args.n_jobs))
+    followup = args.suite == "shape-on-power"
+    pipelines = build_followup_pipelines(n_jobs=args.n_jobs) if followup else build_pipelines(n_jobs=args.n_jobs)
+    results = evaluation.process(pipelines)
     results.to_csv(out / "results.csv", index=False)
     stats = compute_dataset_statistics(results)
     stats.to_csv(out / "stats.csv", index=False)
-    gate = gate_analysis(paradigm, datasets, n_jobs=args.n_jobs)
-    gate.to_csv(out / "gate.csv", index=False)
+    if not followup:
+        gate = gate_analysis(paradigm, datasets, n_jobs=args.n_jobs)
+        gate.to_csv(out / "gate.csv", index=False)
 
     try:
         commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True, text=True, check=True).stdout.strip()
@@ -187,11 +243,11 @@ def main(argv=None):
     meta = {"finished": time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()), "seconds": round(time.time() - t0, 1), "commit": commit,
             "moabb": moabb.__version__, "mne": mne.__version__, "sklearn": sklearn.__version__, "python": platform.python_version(),
             "paradigm": "LeftRightImagery 8-32 Hz, resampled to 128 Hz", "evaluation": "WithinSessionEvaluation, 5-fold, random_state 47",
-            "omega_c": OMEGA_C, "alpha": ALPHA, "primary_dataset": PRIMARY}
-    v = verdicts(results, stats, gate)
+            "omega_c": OMEGA_C, "alpha": ALPHA, "primary_dataset": PRIMARY, "suite": args.suite}
+    v = followup_verdicts(results, stats) if followup else verdicts(results, stats, gate)
     v["meta"] = meta
     (out / "summary.json").write_text(json.dumps(v, indent=1) + "\n")
-    write_summary(v, meta, out / "summary.md")
+    (write_followup_summary if followup else write_summary)(v, meta, out / "summary.md")
     print((out / "summary.md").read_text())
 
 
