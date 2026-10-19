@@ -1,0 +1,10 @@
+moabb==1.7.2
+pyriemann==0.12
+antropy==0.2.3
+mne==1.13.2
+scikit-learn==1.9.1
+numpy
+scipy
+pandas
+joblib
+pytest
