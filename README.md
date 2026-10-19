@@ -54,10 +54,28 @@ A hypothesis that fails is reported as failing. This follows the August monograp
 criterion: the architecture fails its translation if the projected state does not predict
 functional performance.
 
+## Follow-up: does fractal shape add anything on top of power?
+
+H1–H3 failed, and the reason is visible in the measures. Every fractal measure is unchanged when a
+signal is scaled (tested), while imagining a hand movement mostly changes the size of the mu and beta
+rhythms. The follow-up therefore asks whether shape adds information to size. These hypotheses were
+written down before the follow-up was run.
+
+Each pair below differs only by the fractal intent signature. Both decoders in a pair use the same
+channels, bands, standardization and shrinkage LDA, on the same data, evaluation and statistics as
+above.
+
+- **H4.** Band power + fractal shape scores higher than band power alone (log power, mu / beta / 8–32 Hz, every channel).
+- **H5.** Tangent space + fractal shape scores higher than tangent space alone (Riemannian covariance features).
+
+Each test is one-sided at Bonferroni α = 0.05/2. The summary also reports the mean ΔAUC with a 95%
+bootstrap interval over subjects, and in how many subjects the signature helped.
+
 ## Results
 
-GitHub Actions writes them to [`results/summary.md`](results/summary.md) after every run, along with
-the per-subject scores, the statistics and the gate analysis.
+GitHub Actions writes them to [`results/summary.md`](results/summary.md) (H1–H3) and
+[`results/shape-on-power/summary.md`](results/shape-on-power/summary.md) (H4–H5), along with the
+per-subject scores, the statistics and the gate analysis.
 
 ## Run
 
@@ -65,16 +83,20 @@ the per-subject scores, the statistics and the gate analysis.
 pip install -r requirements.txt
 python -m pytest -q        # measures, projector and contraction identities, synthetic motor imagery, MOABB end to end
 python -m benchmark.run    # downloads Liu2024 and BNCI2014_001, writes results/
+python -m benchmark.run --suite shape-on-power --out results/shape-on-power
 ```
 
 `python -m benchmark.run --datasets fake` checks the whole pipeline without downloading anything.
+GitHub Actions runs each suite once and skips any suite whose results are already committed; delete
+a suite's `summary.json` to run it again.
 
 ## Layout
 
 ```
 genesis/fractal.py      fractal intent signatures (per channel and band), cached per trial
 genesis/coherence.py    projection at 47/125, residual, contraction, occupancy gate
-genesis/pipelines.py    the Genesis decoder, its ablations and the two standard decoders
+genesis/power.py        log band power, the size the fractal measures cannot see
+genesis/pipelines.py    the Genesis decoder, its ablations, the standard decoders, the follow-up pairs
 benchmark/run.py        MOABB evaluation, statistics, gate analysis, summary
 tests/                  tests that need no download
 results/                written by GitHub Actions
