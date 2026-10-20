@@ -1,6 +1,6 @@
 # Genesis benchmark: results
 
-Run 2026-10-19 19:59 UTC · commit `18d7c98` · MOABB 1.7.2 · MNE 1.13.2 · scikit-learn 1.9.1 · Python 3.12.15
+Run 2026-10-20 15:19 UTC · commit `be9f6e9` · MOABB 1.7.2 · MNE 1.13.2 · scikit-learn 1.9.1 · Python 3.12.15
 
 Score: within-session ROC-AUC, 5-fold cross-validation per subject and session (0.5 is chance).
 

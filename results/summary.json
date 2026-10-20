@@ -178,9 +178,9 @@
   }
  },
  "meta": {
-  "finished": "2026-10-19 19:59 UTC",
-  "seconds": 1233.1,
-  "commit": "18d7c98",
+  "finished": "2026-10-20 15:19 UTC",
+  "seconds": 485.2,
+  "commit": "be9f6e9",
   "moabb": "1.7.2",
   "mne": "1.13.2",
   "sklearn": "1.9.1",
