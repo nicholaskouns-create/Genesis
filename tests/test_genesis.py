@@ -99,3 +99,45 @@ def test_benchmark_end_to_end_without_download(tmp_path):
     for key in ("H1_genesis_beats_standard_decoders", "H2_47_over_125_beats_other_fractions", "H3_gate_predicts_reliability"):
         assert key in d
     assert (tmp_path / "summary.md").read_text().startswith("# Genesis benchmark")
+
+
+def test_band_power_reads_rhythm_size():
+    """Log band power of a 10 Hz rhythm of amplitude A is log(A^2 / 2) in the mu band; doubling A adds log 4."""
+    from genesis import BandPower
+    t = np.arange(int(4 * FS)) / FS
+    X = np.stack([np.stack([a * np.sin(2 * np.pi * 10 * t)]) for a in (1.0, 2.0)])   # 2 trials x 1 channel
+    bp = BandPower(bands=("mu",)).fit_transform(X)
+    assert bp.shape == (2, 1)
+    assert abs(bp[0, 0] - np.log(0.5)) < 0.05
+    assert abs((bp[1, 0] - bp[0, 0]) - np.log(4.0)) < 1e-6
+
+
+def test_fractal_measures_ignore_rhythm_size():
+    """Why the fractal signature misses imagery: scaling a signal leaves every fractal measure unchanged."""
+    X, _, _ = synthetic_motor_imagery(n_per_class=2)
+    a = FractalIntentSignature(n_jobs=1).fit_transform(X)
+    b = FractalIntentSignature(n_jobs=1).fit_transform(3.0 * X)
+    assert np.allclose(a, b, atol=1e-6)
+
+
+def test_followup_pairs_differ_only_by_the_signature():
+    from genesis import FOLLOWUP_PAIRS, build_followup_pipelines
+    X, y, _ = synthetic_motor_imagery()
+    pipes = build_followup_pipelines(n_jobs=1)
+    cv = StratifiedKFold(5, shuffle=True, random_state=47)
+    for with_shape, without in FOLLOWUP_PAIRS:
+        assert cross_val_score(pipes[with_shape], X, y, cv=cv, scoring="roc_auc").mean() > 0.8
+        assert cross_val_score(pipes[without], X, y, cv=cv, scoring="roc_auc").mean() > 0.8
+        n_with = pipes[with_shape][:-2].fit_transform(X, y).shape[1]
+        n_without = pipes[without][:-2].fit_transform(X, y).shape[1]
+        assert n_with - n_without == 13 * X.shape[1]                     # exactly the fractal signature added
+
+
+def test_followup_end_to_end_without_download(tmp_path):
+    from benchmark.run import main
+    main(["--suite", "shape-on-power", "--datasets", "fake", "--out", str(tmp_path), "--n-jobs", "1"])
+    summary = json.loads((tmp_path / "summary.json").read_text())
+    comps = summary["datasets"]["FakeDataset"]["comparisons"]
+    assert [c["title"][:2] for c in comps] == ["H4", "H5"]
+    assert all(len(c["ci95"]) == 2 for c in comps)
+    assert (tmp_path / "summary.md").read_text().startswith("# Does fractal shape add anything")
