@@ -112,3 +112,5 @@ Data and methods:
 - BCI Competition IV dataset 2a
 - MOABB: Jayaram and Barachant, *MOABB: trustworthy algorithm benchmarking for BCIs*, 2018
 - Fractal dimension decoding of motor imagery in ALS, PMC5539553
+
+[The E₄₇ spectral kernel · formalism and verification](e47-spectral-kernel/README.md)
