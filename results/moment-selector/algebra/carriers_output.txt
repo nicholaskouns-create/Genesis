@@ -1,0 +1,16 @@
+carrier                                               dim     mu  sigma^2       kept  fraction
+hypercube Q_4 adjacency                                16      0        4          8  0.5000
+hypercube Q_9 adjacency                               512      0        9        168  0.3281
+hypercube Q_16 adjacency                            65536      0       16      16016  0.2444
+hypercube Q_25 adjacency                         33554432      0       25    6537520  0.1948
+hypercube Q_36 adjacency                      68719476736      0       36 11135805120  0.1620
+Hamming H(18,3) adjacency                       387420489      0       36   94943232  0.2451
+Johnson J(6,3) adjacency                               20      0        9         10  0.5000
+Johnson J(12,6) adjacency                             924      0       36        286  0.3095
+Johnson J(20,10) adjacency                         184756      0      100      40052  0.2168
+Johnson J(30,15) adjacency                      155117520      0      225   25432710  0.1640
+S_2 transposition class sum, regular rep                2      0        1          2  1.0000
+S_9 transposition class sum, regular rep           362880      0       36      42912  0.1183
+SU(2) spin 1/2 tensor power 3                           8    9/4      9/4          8  1.0000
+SU(2) spin 2 tensor power 3                           125     18      144         47  0.3760
+SU(2) spin 6 tensor power 3                          2197    126     7056        314  0.1429

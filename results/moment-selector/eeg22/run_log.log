@@ -1,0 +1,39 @@
+1 {'A none': 0.673, 'A fisher47': 0.735, 'A moment 0.5': 0.459, 'A frac 0.5': 0.071, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 20.2, 'A sig': 1.184, 'A random': 0.603, 'A topk': 0.668, 'B moment 0.5': 0.527, 'B frac 0.5': 0.364, 'B fb 0.5': 0.0, 'B lo': 6.0, 'B hi': 2.0, 'B random': 0.742, 'B topk': 0.525, 'B all22': 0.832, 'B csp': 0.933, 'B tangent': 0.951, 'n': 144, 'd': 286}
+2 {'A none': 0.5, 'A fisher47': 0.437, 'A moment 0.5': 0.516, 'A frac 0.5': 0.074, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 21.2, 'A sig': 1.383, 'A random': 0.502, 'A topk': 0.495, 'B moment 0.5': 0.479, 'B frac 0.5': 0.273, 'B fb 0.5': 0.0, 'B lo': 5.0, 'B hi': 1.0, 'B random': 0.549, 'B topk': 0.584, 'B all22': 0.533, 'B csp': 0.631, 'B tangent': 0.647, 'n': 144, 'd': 286}
+3 {'A none': 0.872, 'A fisher47': 0.912, 'A moment 0.5': 0.51, 'A frac 0.5': 0.067, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 19.2, 'A sig': 1.306, 'A random': 0.766, 'A topk': 0.873, 'B moment 0.5': 0.723, 'B frac 0.5': 0.409, 'B fb 0.5': 0.0, 'B lo': 7.0, 'B hi': 2.0, 'B random': 0.868, 'B topk': 0.644, 'B all22': 0.936, 'B csp': 0.996, 'B tangent': 0.995, 'n': 144, 'd': 286}
+4 {'A none': 0.602, 'A fisher47': 0.593, 'A moment 0.5': 0.579, 'A frac 0.5': 0.069, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 19.6, 'A sig': 1.146, 'A random': 0.546, 'A topk': 0.572, 'B moment 0.5': 0.717, 'B frac 0.5': 0.336, 'B fb 0.5': 0.0, 'B lo': 5.4, 'B hi': 2.0, 'B random': 0.657, 'B topk': 0.715, 'B all22': 0.697, 'B csp': 0.757, 'B tangent': 0.827, 'n': 144, 'd': 286}
+5 {'A none': 0.42, 'A fisher47': 0.432, 'A moment 0.5': 0.464, 'A frac 0.5': 0.069, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 19.8, 'A sig': 1.234, 'A random': 0.493, 'A topk': 0.445, 'B moment 0.5': 0.441, 'B frac 0.5': 0.409, 'B fb 0.5': 0.0, 'B lo': 7.0, 'B hi': 2.0, 'B random': 0.508, 'B topk': 0.551, 'B all22': 0.47, 'B csp': 0.56, 'B tangent': 0.604, 'n': 144, 'd': 286}
+6 {'A none': 0.446, 'A fisher47': 0.474, 'A moment 0.5': 0.5, 'A frac 0.5': 0.078, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 22.2, 'A sig': 1.344, 'A random': 0.497, 'A topk': 0.517, 'B moment 0.5': 0.593, 'B frac 0.5': 0.364, 'B fb 0.5': 0.0, 'B lo': 6.0, 'B hi': 2.0, 'B random': 0.641, 'B topk': 0.572, 'B all22': 0.748, 'B csp': 0.766, 'B tangent': 0.854, 'n': 144, 'd': 286}
+7 {'A none': 0.474, 'A fisher47': 0.381, 'A moment 0.5': 0.411, 'A frac 0.5': 0.07, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 20.0, 'A sig': 1.214, 'A random': 0.428, 'A topk': 0.417, 'B moment 0.5': 0.678, 'B frac 0.5': 0.364, 'B fb 0.5': 0.0, 'B lo': 6.0, 'B hi': 2.0, 'B random': 0.614, 'B topk': 0.59, 'B all22': 0.703, 'B csp': 0.872, 'B tangent': 0.873, 'n': 144, 'd': 286}
+8 {'A none': 0.836, 'A fisher47': 0.771, 'A moment 0.5': 0.622, 'A frac 0.5': 0.067, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 19.2, 'A sig': 1.305, 'A random': 0.644, 'A topk': 0.687, 'B moment 0.5': 0.661, 'B frac 0.5': 0.364, 'B fb 0.5': 0.0, 'B lo': 6.0, 'B hi': 2.0, 'B random': 0.86, 'B topk': 0.753, 'B all22': 0.959, 'B csp': 1.0, 'B tangent': 1.0, 'n': 144, 'd': 286}
+9 {'A none': 0.777, 'A fisher47': 0.797, 'A moment 0.5': 0.485, 'A frac 0.5': 0.07, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 20.0, 'A sig': 1.228, 'A random': 0.68, 'A topk': 0.802, 'B moment 0.5': 0.684, 'B frac 0.5': 0.227, 'B fb 0.5': 0.0, 'B lo': 3.0, 'B hi': 2.0, 'B random': 0.649, 'B topk': 0.682, 'B all22': 0.837, 'B csp': 0.837, 'B tangent': 0.906, 'n': 144, 'd': 286}
+
+MEANS
+  A none           0.622 ± 0.175
+  A fisher47       0.615 ± 0.194
+  A moment 0.5     0.505 ± 0.064
+  A frac 0.5       0.070 ± 0.003
+  A fb 0.5         0.000 ± 0.000
+  A lo             0.000 ± 0.000
+  A hi             20.156 ± 0.974
+  A sig            1.260 ± 0.078
+  A random         0.573 ± 0.108
+  A topk           0.608 ± 0.159
+  B moment 0.5     0.611 ± 0.106
+  B frac 0.5       0.345 ± 0.060
+  B fb 0.5         0.000 ± 0.000
+  B lo             5.711 ± 1.205
+  B hi             1.889 ± 0.333
+  B random         0.676 ± 0.125
+  B topk           0.624 ± 0.079
+  B all22          0.746 ± 0.167
+  B csp            0.817 ± 0.154
+  B tangent        0.851 ± 0.141
+  n                144.000 ± 0.000
+  d                286.000 ± 0.000
+
+TESTS (alpha 0.0125)
+M1 A moment > no projection: Δ=-0.117  wins 3/9  p=0.9629  not supported
+M2 A moment > random same rank: Δ=-0.068  wins 3/9  p=0.9512  not supported
+M3 B moment > random same rank: Δ=-0.065  wins 3/9  p=0.9629  not supported
+M4 B moment > CSP: Δ=-0.205  wins 0/9  p=1.0000  not supported

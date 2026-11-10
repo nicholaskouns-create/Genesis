@@ -1,0 +1,22 @@
+a ['left', 'foot'] geom (1.8528, 0.102, 48) p_l [0.0068, 0.4053, 0.3359, 0.0775, 0.0682, 0.0767, 0.0295] 
+   mu 8.66 sigma 9.91 selected [((0, 4), 25)] frac 0.204 | selected 0.621  rank 25/28  best set 0.893 median set 0.808 | set2,5 0.858 all49 0.908 ch59 0.941 csp 0.904 tangent 0.977
+b ['left', 'right'] geom (1.8528, 0.102, 48) p_l [0.0086, 0.2063, 0.2133, 0.1205, 0.149, 0.2122, 0.0902] 
+   mu 16.27 sigma 13.07 selected [((1, 5), 25)] frac 0.286 | selected 0.461  rank 27/28  best set 0.618 median set 0.525 | set2,5 0.524 all49 0.635 ch59 0.801 csp 0.834 tangent 0.832
+f ['left', 'foot'] geom (1.8528, 0.102, 48) p_l [0.009, 0.3562, 0.3529, 0.0932, 0.0691, 0.0827, 0.037] 
+   mu 9.36 sigma 10.35 selected [((0, 4), 25)] frac 0.204 | selected 0.748  rank 19/28  best set 0.853 median set 0.770 | set2,5 0.823 all49 0.886 ch59 0.916 csp 0.962 tangent 0.982
+g ['left', 'right'] geom (1.8528, 0.102, 48) p_l [0.0063, 0.3812, 0.3637, 0.0766, 0.0717, 0.0742, 0.0263] 
+   mu 8.63 sigma 9.64 selected [((0, 4), 25)] frac 0.204 | selected 0.577  rank 22/28  best set 0.676 median set 0.626 | set2,5 0.579 all49 0.696 ch59 0.948 csp 0.962 tangent 0.980
+c ['left', 'right'] geom (1.8528, 0.102, 48) p_l [0.0053, 0.4087, 0.224, 0.1192, 0.0794, 0.1202, 0.0431] 
+   mu 10.60 sigma 11.43 selected [((0, 4), 25)] frac 0.204 | selected 0.538  rank 7/28  best set 0.592 median set 0.516 | set2,5 0.573 all49 0.532 ch59 0.782 csp 0.872 tangent 0.870
+d ['left', 'right'] geom (1.8528, 0.102, 48) p_l [0.008, 0.1091, 0.1499, 0.1031, 0.1574, 0.3092, 0.1632] 
+   mu 21.64 sigma 13.48 selected [((2, 5), 25)] frac 0.327 | selected 0.567  rank 7/28  best set 0.628 median set 0.511 | set2,5 0.567 all49 0.548 ch59 0.924 csp 0.992 tangent 0.988
+e ['left', 'right'] geom (1.8528, 0.102, 48) p_l [0.0089, 0.0759, 0.1236, 0.0953, 0.1636, 0.2891, 0.2435] 
+   mu 24.21 sigma 13.69 selected [((3, 6), 25)] frac 0.408 | selected 0.564  rank 9/28  best set 0.609 median set 0.517 | set2,5 0.550 all49 0.519 ch59 0.980 csp 0.991 tangent 0.985
+
+PRIMARY: T = 0.6019   null mean 0.6732   p = 0.9743   not supported
+  human mean selected  0.602   artificial mean 0.556
+  human mean set 2,5   0.696   artificial mean 0.563
+  human mean all49     0.781   artificial mean 0.533
+  human mean ch59      0.902   artificial mean 0.895
+  human mean csp       0.915   artificial mean 0.952
+  human mean tangent   0.943   artificial mean 0.948
