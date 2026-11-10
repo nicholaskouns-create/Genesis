@@ -3,6 +3,20 @@
 Run 2026-11-10 UTC. Every rule and hypothesis below was written, timestamped and hashed before the
 signals it concerns were analysed. Nothing here has been trimmed.
 
+**Read this first.** Motor intent is in the EEG signal and can be read: in healthy subjects, existing
+decoders reach 0.82 to 0.94 in these runs. In the 50 acute stroke patients of the published Genesis
+benchmark (`results/summary.md`), every decoder was close to chance. That is where the problem is
+still open, for all methods.
+
+| decoder (published Genesis benchmark, ROC-AUC) | healthy, 9 subjects | acute stroke, 50 patients |
+|---|---|---|
+| Tangent space + LR | 0.863 | 0.550 |
+| CSP + LDA | 0.834 | 0.539 |
+| Genesis | 0.623 | 0.522 |
+
+The tests below close one candidate: the E47 moment selector as the decoder. They do not measure the
+goal of restoring movement, and they do not show that existing methods have solved it for patients.
+
 **Question.** The E47 moment-selector theorem builds the selector from a carrier's own first two
 moments: K = (C − (μ − σ))(C − (μ + σ)). On the spin-2 cube this gives the sectors 6 and 30 and the
 fraction 47/125. The earlier Genesis benchmark carried the *number* 47/125 onto EEG and found no
