@@ -1,0 +1,55 @@
+1 {'A none': 0.673, 'A fisher47': 0.735, 'A moment 0.5': 0.705, 'A frac 0.5': 0.016, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 4.6, 'A sig': 3.987, 'A random': 0.548, 'A topk': 0.537, 'A moment 0.25': 0.674, 'A frac 0.25': 0.006, 'A fb 0.25': 0.0, 'A moment 0.74': 0.733, 'A frac 0.74': 0.026, 'A fb 0.74': 0.0, 'B moment 0.5': 0.592, 'B frac 0.5': 0.091, 'B fb 0.5': 1.0, 'B lo': 1.0, 'B hi': 1.0, 'B random': 0.569, 'B topk': 0.596, 'B moment 0.25': 0.592, 'B frac 0.25': 0.091, 'B fb 0.25': 1.0, 'B moment 0.74': 0.592, 'B frac 0.74': 0.091, 'B fb 0.74': 1.0, 'B all22': 0.832, 'B csp': 0.933, 'B tangent': 0.951, 'n': 144, 'd': 286}
+2 {'A none': 0.5, 'A fisher47': 0.437, 'A moment 0.5': 0.515, 'A frac 0.5': 0.006, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 1.6, 'A sig': 7.115, 'A random': 0.495, 'A topk': 0.542, 'A moment 0.25': 0.542, 'A frac 0.25': 0.006, 'A fb 0.25': 0.6, 'A moment 0.74': 0.546, 'A frac 0.74': 0.013, 'A fb 0.74': 0.0, 'B moment 0.5': 0.56, 'B frac 0.5': 0.091, 'B fb 0.5': 1.0, 'B lo': 1.0, 'B hi': 1.0, 'B random': 0.523, 'B topk': 0.583, 'B moment 0.25': 0.56, 'B frac 0.25': 0.091, 'B fb 0.25': 1.0, 'B moment 0.74': 0.56, 'B frac 0.74': 0.091, 'B fb 0.74': 1.0, 'B all22': 0.533, 'B csp': 0.631, 'B tangent': 0.647, 'n': 144, 'd': 286}
+3 {'A none': 0.872, 'A fisher47': 0.912, 'A moment 0.5': 0.771, 'A frac 0.5': 0.012, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 3.4, 'A sig': 5.785, 'A random': 0.58, 'A topk': 0.605, 'A moment 0.25': 0.685, 'A frac 0.25': 0.004, 'A fb 0.25': 0.0, 'A moment 0.74': 0.774, 'A frac 0.74': 0.021, 'A fb 0.74': 0.0, 'B moment 0.5': 0.596, 'B frac 0.5': 0.091, 'B fb 0.5': 1.0, 'B lo': 1.0, 'B hi': 1.0, 'B random': 0.671, 'B topk': 0.577, 'B moment 0.25': 0.596, 'B frac 0.25': 0.091, 'B fb 0.25': 1.0, 'B moment 0.74': 0.596, 'B frac 0.74': 0.091, 'B fb 0.74': 1.0, 'B all22': 0.936, 'B csp': 0.996, 'B tangent': 0.995, 'n': 144, 'd': 286}
+4 {'A none': 0.602, 'A fisher47': 0.593, 'A moment 0.5': 0.533, 'A frac 0.5': 0.017, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 5.0, 'A sig': 3.601, 'A random': 0.516, 'A topk': 0.494, 'A moment 0.25': 0.533, 'A frac 0.25': 0.008, 'A fb 0.25': 0.0, 'A moment 0.74': 0.555, 'A frac 0.74': 0.03, 'A fb 0.74': 0.0, 'B moment 0.5': 0.565, 'B frac 0.5': 0.091, 'B fb 0.5': 1.0, 'B lo': 1.0, 'B hi': 1.0, 'B random': 0.581, 'B topk': 0.498, 'B moment 0.25': 0.565, 'B frac 0.25': 0.091, 'B fb 0.25': 1.0, 'B moment 0.74': 0.467, 'B frac 0.74': 0.045, 'B fb 0.74': 0.0, 'B all22': 0.697, 'B csp': 0.757, 'B tangent': 0.827, 'n': 144, 'd': 286}
+5 {'A none': 0.42, 'A fisher47': 0.432, 'A moment 0.5': 0.472, 'A frac 0.5': 0.01, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 3.0, 'A sig': 4.684, 'A random': 0.507, 'A topk': 0.507, 'A moment 0.25': 0.48, 'A frac 0.25': 0.004, 'A fb 0.25': 0.0, 'A moment 0.74': 0.411, 'A frac 0.74': 0.022, 'A fb 0.74': 0.0, 'B moment 0.5': 0.487, 'B frac 0.5': 0.091, 'B fb 0.5': 1.0, 'B lo': 1.0, 'B hi': 1.0, 'B random': 0.535, 'B topk': 0.549, 'B moment 0.25': 0.487, 'B frac 0.25': 0.091, 'B fb 0.25': 1.0, 'B moment 0.74': 0.487, 'B frac 0.74': 0.091, 'B fb 0.74': 1.0, 'B all22': 0.47, 'B csp': 0.56, 'B tangent': 0.604, 'n': 144, 'd': 286}
+6 {'A none': 0.446, 'A fisher47': 0.474, 'A moment 0.5': 0.459, 'A frac 0.5': 0.013, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 3.6, 'A sig': 5.734, 'A random': 0.504, 'A topk': 0.537, 'A moment 0.25': 0.507, 'A frac 0.25': 0.007, 'A fb 0.25': 0.0, 'A moment 0.74': 0.492, 'A frac 0.74': 0.02, 'A fb 0.74': 0.0, 'B moment 0.5': 0.494, 'B frac 0.5': 0.091, 'B fb 0.5': 1.0, 'B lo': 1.0, 'B hi': 1.0, 'B random': 0.565, 'B topk': 0.498, 'B moment 0.25': 0.494, 'B frac 0.25': 0.091, 'B fb 0.25': 1.0, 'B moment 0.74': 0.492, 'B frac 0.74': 0.055, 'B fb 0.74': 0.2, 'B all22': 0.748, 'B csp': 0.766, 'B tangent': 0.854, 'n': 144, 'd': 286}
+7 {'A none': 0.474, 'A fisher47': 0.381, 'A moment 0.5': 0.469, 'A frac 0.5': 0.017, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 4.8, 'A sig': 4.144, 'A random': 0.421, 'A topk': 0.327, 'A moment 0.25': 0.438, 'A frac 0.25': 0.009, 'A fb 0.25': 0.0, 'A moment 0.74': 0.524, 'A frac 0.74': 0.028, 'A fb 0.74': 0.0, 'B moment 0.5': 0.573, 'B frac 0.5': 0.091, 'B fb 0.5': 1.0, 'B lo': 1.0, 'B hi': 1.0, 'B random': 0.533, 'B topk': 0.547, 'B moment 0.25': 0.573, 'B frac 0.25': 0.091, 'B fb 0.25': 1.0, 'B moment 0.74': 0.573, 'B frac 0.74': 0.091, 'B fb 0.74': 1.0, 'B all22': 0.703, 'B csp': 0.872, 'B tangent': 0.873, 'n': 144, 'd': 286}
+8 {'A none': 0.836, 'A fisher47': 0.771, 'A moment 0.5': 0.635, 'A frac 0.5': 0.01, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 3.0, 'A sig': 5.261, 'A random': 0.563, 'A topk': 0.588, 'A moment 0.25': 0.621, 'A frac 0.25': 0.006, 'A fb 0.25': 0.0, 'A moment 0.74': 0.663, 'A frac 0.74': 0.022, 'A fb 0.74': 0.0, 'B moment 0.5': 0.643, 'B frac 0.5': 0.091, 'B fb 0.5': 1.0, 'B lo': 1.0, 'B hi': 1.0, 'B random': 0.658, 'B topk': 0.574, 'B moment 0.25': 0.643, 'B frac 0.25': 0.091, 'B fb 0.25': 1.0, 'B moment 0.74': 0.643, 'B frac 0.74': 0.091, 'B fb 0.74': 1.0, 'B all22': 0.959, 'B csp': 1.0, 'B tangent': 1.0, 'n': 144, 'd': 286}
+9 {'A none': 0.777, 'A fisher47': 0.797, 'A moment 0.5': 0.705, 'A frac 0.5': 0.018, 'A fb 0.5': 0.0, 'A lo': 0.0, 'A hi': 5.2, 'A sig': 4.225, 'A random': 0.593, 'A topk': 0.603, 'A moment 0.25': 0.704, 'A frac 0.25': 0.009, 'A fb 0.25': 0.0, 'A moment 0.74': 0.705, 'A frac 0.74': 0.034, 'A fb 0.74': 0.0, 'B moment 0.5': 0.391, 'B frac 0.5': 0.091, 'B fb 0.5': 1.0, 'B lo': 1.0, 'B hi': 1.0, 'B random': 0.565, 'B topk': 0.526, 'B moment 0.25': 0.391, 'B frac 0.25': 0.091, 'B fb 0.25': 1.0, 'B moment 0.74': 0.461, 'B frac 0.74': 0.064, 'B fb 0.74': 0.0, 'B all22': 0.837, 'B csp': 0.837, 'B tangent': 0.906, 'n': 144, 'd': 286}
+
+MEANS
+  A none           0.622 ± 0.175
+  A fisher47       0.615 ± 0.194
+  A moment 0.5     0.585 ± 0.120
+  A frac 0.5       0.013 ± 0.004
+  A fb 0.5         0.000 ± 0.000
+  A lo             0.000 ± 0.000
+  A hi             3.800 ± 1.192
+  A sig            4.948 ± 1.123
+  A random         0.525 ± 0.053
+  A topk           0.527 ± 0.085
+  A moment 0.25    0.576 ± 0.097
+  A frac 0.25      0.007 ± 0.002
+  A fb 0.25        0.067 ± 0.200
+  A moment 0.74    0.600 ± 0.123
+  A frac 0.74      0.024 ± 0.006
+  A fb 0.74        0.000 ± 0.000
+  B moment 0.5     0.545 ± 0.075
+  B frac 0.5       0.091 ± 0.000
+  B fb 0.5         1.000 ± 0.000
+  B lo             1.000 ± 0.000
+  B hi             1.000 ± 0.000
+  B random         0.578 ± 0.053
+  B topk           0.550 ± 0.036
+  B moment 0.25    0.545 ± 0.075
+  B frac 0.25      0.091 ± 0.000
+  B fb 0.25        1.000 ± 0.000
+  B moment 0.74    0.541 ± 0.066
+  B frac 0.74      0.079 ± 0.019
+  B fb 0.74        0.689 ± 0.470
+  B all22          0.746 ± 0.167
+  B csp            0.817 ± 0.154
+  B tangent        0.851 ± 0.141
+  n                144.000 ± 0.000
+  d                286.000 ± 0.000
+
+TESTS (alpha 0.0125)
+M1 A moment > no projection: Δ=-0.037  wins 4/9  p=0.8496  not supported
+M2 A moment > random same rank: Δ=+0.060  wins 7/9  p=0.0371  not supported
+M3 B moment > random same rank: Δ=-0.033  wins 3/9  p=0.8984  not supported
+M4 B moment > CSP: Δ=-0.272  wins 0/9  p=1.0000  not supported
+
+real	3m18.712s
+user	3m28.087s
+sys	0m7.750s

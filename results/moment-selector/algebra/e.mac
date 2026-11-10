@@ -1,0 +1,4 @@
+p:expand((x^-2+x^-1+1+x+x^2)^3)$ w(k):=coeff(p,x,k)$
+d:makelist((w(J)-w(J+1))*(2*J+1),J,0,6)$ lam:makelist(J*(J+1),J,0,6)$
+N:apply("+",d)$ mu:apply("+",d*lam)/N$ v:apply("+",d*lam^2)/N-mu^2$
+print("maxima",d,N,mu,v,solve((t-mu)^2=v,t),apply("+",makelist(if (lam[i]-mu)^2=v then d[i] else 0,i,1,7)))$
