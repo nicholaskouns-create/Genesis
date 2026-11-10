@@ -1,5 +1,8 @@
 # Genesis
 
+> **Current licensing:** [All Rights Reserved](LICENSE) for original material owned by Nicholas Shane Kouns. No new reuse permission is granted. Previously granted licenses and third-party/public-domain rights remain unaffected.
+
+
 **Does the Genesis intent decoder read the intention to move from the brain better than the decoders
 brain–computer interfaces use today?**
 
