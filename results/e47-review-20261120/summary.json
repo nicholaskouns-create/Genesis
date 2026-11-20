@@ -1,0 +1,195 @@
+{
+ "datasets": {
+  "BNCI2014-001": {
+   "description": "9 healthy participants, BCI Competition IV 2a, left- versus right-hand motor imagery",
+   "n_subjects": 9,
+   "auc": {
+    "Tangent space + LR": {
+     "mean": 0.8629327283965217,
+     "sd": 0.13799843192100525
+    },
+    "CSP + LDA": {
+     "mean": 0.8338813384373983,
+     "sd": 0.15532660484313965
+    },
+    "Genesis, fraction 0.50": {
+     "mean": 0.629365086555481,
+     "sd": 0.18985067307949066
+    },
+    "Genesis, fraction 0.25": {
+     "mean": 0.6292328106032478,
+     "sd": 0.18854816257953644
+    },
+    "Genesis, no projection": {
+     "mean": 0.6244973639647166,
+     "sd": 0.18780571222305298
+    },
+    "Genesis": {
+     "mean": 0.623458057641983,
+     "sd": 0.19368140399456024
+    },
+    "Genesis, variance projection": {
+     "mean": 0.6135903166400062,
+     "sd": 0.1610652506351471
+    },
+    "Correlation dimension + LDA": {
+     "mean": 0.5898261467615763,
+     "sd": 0.11155790835618973
+    }
+   },
+   "H1_genesis_beats_standard_decoders": {
+    "comparisons": [
+     {
+      "versus": "CSP + LDA",
+      "mean_auc_difference": -0.2104232907295227,
+      "p_one_sided": 0.998046875,
+      "standardized_effect": -1.7244131991083198
+     },
+     {
+      "versus": "Tangent space + LR",
+      "mean_auc_difference": -0.23947466909885406,
+      "p_one_sided": 0.998046875,
+      "standardized_effect": -1.9302766428500744
+     }
+    ],
+    "alpha_bonferroni": 0.025,
+    "supported": false
+   },
+   "H2_47_over_125_beats_other_fractions": {
+    "comparisons": [
+     {
+      "versus": "Genesis, fraction 0.25",
+      "mean_auc_difference": -0.005774753168225288,
+      "p_one_sided": 0.791015625,
+      "standardized_effect": -0.26362705871153375
+     },
+     {
+      "versus": "Genesis, fraction 0.50",
+      "mean_auc_difference": -0.005907028913497925,
+      "p_one_sided": 0.84765625,
+      "standardized_effect": -0.36045289354254767
+     },
+     {
+      "versus": "Genesis, no projection",
+      "mean_auc_difference": -0.001039306283928454,
+      "p_one_sided": 0.541015625,
+      "standardized_effect": -0.03907216010146463
+     }
+    ],
+    "alpha_bonferroni": 0.016666666666666666,
+    "supported": false
+   },
+   "H3_gate_predicts_reliability": {
+    "subjects_with_both": 9,
+    "mean_acc_pass": 0.6026224263504751,
+    "mean_acc_fail": 0.5923536659792246,
+    "mean_pass_fraction": 0.4810956790123456,
+    "p_one_sided": 0.28515625,
+    "supported": false
+   }
+  },
+  "Liu2024": {
+   "description": "50 acute stroke patients, left- versus right-hand motor imagery (Liu et al., Scientific Data 2024)",
+   "n_subjects": 50,
+   "auc": {
+    "Tangent space + LR": {
+     "mean": 0.5499999958276749,
+     "sd": 0.1779811680316925
+    },
+    "CSP + LDA": {
+     "mean": 0.5385000038146973,
+     "sd": 0.1429874449968338
+    },
+    "Correlation dimension + LDA": {
+     "mean": 0.5369999980926514,
+     "sd": 0.13674327731132507
+    },
+    "Genesis, fraction 0.25": {
+     "mean": 0.5277499961853027,
+     "sd": 0.1777174174785614
+    },
+    "Genesis": {
+     "mean": 0.5217499998211861,
+     "sd": 0.17419293522834778
+    },
+    "Genesis, fraction 0.50": {
+     "mean": 0.5177499982714653,
+     "sd": 0.17670615017414093
+    },
+    "Genesis, no projection": {
+     "mean": 0.5132500004768371,
+     "sd": 0.16376879811286926
+    },
+    "Genesis, variance projection": {
+     "mean": 0.5067500001192093,
+     "sd": 0.14957870543003082
+    }
+   },
+   "H1_genesis_beats_standard_decoders": {
+    "comparisons": [
+     {
+      "versus": "CSP + LDA",
+      "mean_auc_difference": -0.016750004142522812,
+      "p_one_sided": 0.7458974289265452,
+      "standardized_effect": -0.08884227225537805
+     },
+     {
+      "versus": "Tangent space + LR",
+      "mean_auc_difference": -0.028249995782971382,
+      "p_one_sided": 0.8062499205773137,
+      "standardized_effect": -0.1381481657674369
+     }
+    ],
+    "alpha_bonferroni": 0.025,
+    "supported": false
+   },
+   "H2_47_over_125_beats_other_fractions": {
+    "comparisons": [
+     {
+      "versus": "Genesis, fraction 0.25",
+      "mean_auc_difference": -0.005999996792525053,
+      "p_one_sided": 0.8682564638539556,
+      "standardized_effect": -0.14813401843456556
+     },
+     {
+      "versus": "Genesis, fraction 0.50",
+      "mean_auc_difference": 0.004000001586973667,
+      "p_one_sided": 0.14035177118972175,
+      "standardized_effect": 0.1147767881828423
+     },
+     {
+      "versus": "Genesis, no projection",
+      "mean_auc_difference": 0.008499998599290848,
+      "p_one_sided": 0.2014219862322717,
+      "standardized_effect": 0.1478232283276345
+     }
+    ],
+    "alpha_bonferroni": 0.016666666666666666,
+    "supported": false
+   },
+   "H3_gate_predicts_reliability": {
+    "subjects_with_both": 50,
+    "mean_acc_pass": 0.4999050817339804,
+    "mean_acc_fail": 0.5365457319926898,
+    "mean_pass_fraction": 0.49050000000000005,
+    "p_one_sided": 0.9580056429158826,
+    "supported": false
+   }
+  }
+ },
+ "meta": {
+  "finished": "2026-11-20 16:02 UTC",
+  "seconds": 843.6,
+  "commit": "4c477ab",
+  "moabb": "1.7.2",
+  "mne": "1.13.2",
+  "sklearn": "1.9.1",
+  "python": "3.12.14",
+  "paradigm": "LeftRightImagery 8-32 Hz, resampled to 128 Hz",
+  "evaluation": "WithinSessionEvaluation, 5-fold, random_state 47",
+  "omega_c": 0.376,
+  "alpha": 0.05,
+  "primary_dataset": "Liu2024",
+  "suite": "preregistered"
+ }
+}

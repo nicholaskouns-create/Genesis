@@ -1,0 +1,129 @@
+dataset,index,pipe1,pipe2,p,smd,nsub
+Liu2024,0,CSP + LDA,CSP + LDA,0.0,0.0,50
+Liu2024,1,Correlation dimension + LDA,CSP + LDA,0.6440447596831066,-0.008454622001503398,50
+Liu2024,2,Genesis,CSP + LDA,0.7458974289265452,-0.08884227225537805,50
+Liu2024,3,"Genesis, fraction 0.25",CSP + LDA,0.6942064122723607,-0.0592650455632309,50
+Liu2024,4,"Genesis, fraction 0.50",CSP + LDA,0.7394659152782349,-0.10718346965129841,50
+Liu2024,5,"Genesis, no projection",CSP + LDA,0.7955104564535928,-0.14453441505157427,50
+Liu2024,6,"Genesis, variance projection",CSP + LDA,0.8994738895250286,-0.18426683701390012,50
+Liu2024,7,Tangent space + LR,CSP + LDA,0.23837221404636616,0.11058039151643667,50
+Liu2024,8,CSP + LDA,Correlation dimension + LDA,0.3559552403168934,0.008454622001503398,50
+Liu2024,9,Correlation dimension + LDA,Correlation dimension + LDA,0.0,0.0,50
+Liu2024,10,Genesis,Correlation dimension + LDA,0.7550180533351238,-0.07916717276721656,50
+Liu2024,11,"Genesis, fraction 0.25",Correlation dimension + LDA,0.6583272425801964,-0.04789399789749237,50
+Liu2024,12,"Genesis, fraction 0.50",Correlation dimension + LDA,0.7569030630463107,-0.0971904237990335,50
+Liu2024,13,"Genesis, no projection",Correlation dimension + LDA,0.7983459780403614,-0.13052707819016082,50
+Liu2024,14,"Genesis, variance projection",Correlation dimension + LDA,0.89858767032553,-0.17378078205429526,50
+Liu2024,15,Tangent space + LR,Correlation dimension + LDA,0.42474867559201396,0.06519800625248547,50
+Liu2024,16,CSP + LDA,Genesis,0.2541025710734548,0.08884227225537805,50
+Liu2024,17,Correlation dimension + LDA,Genesis,0.24498194666487622,0.07916717276721656,50
+Liu2024,18,Genesis,Genesis,0.0,0.0,50
+Liu2024,19,"Genesis, fraction 0.25",Genesis,0.13174353614604445,0.14813401843456556,50
+Liu2024,20,"Genesis, fraction 0.50",Genesis,0.8596482288102782,-0.1147767881828423,50
+Liu2024,21,"Genesis, no projection",Genesis,0.7985780137677283,-0.1478232283276345,50
+Liu2024,22,"Genesis, variance projection",Genesis,0.8952982823110369,-0.21849527100422889,50
+Liu2024,23,Tangent space + LR,Genesis,0.19375007942268635,0.1381481657674369,50
+Liu2024,24,CSP + LDA,"Genesis, fraction 0.25",0.3057935877276393,0.0592650455632309,50
+Liu2024,25,Correlation dimension + LDA,"Genesis, fraction 0.25",0.34167275741980363,0.04789399789749237,50
+Liu2024,26,Genesis,"Genesis, fraction 0.25",0.8682564638539556,-0.14813401843456556,50
+Liu2024,27,"Genesis, fraction 0.25","Genesis, fraction 0.25",0.0,0.0,50
+Liu2024,28,"Genesis, fraction 0.50","Genesis, fraction 0.25",0.9041868300470566,-0.21135832972796556,50
+Liu2024,29,"Genesis, no projection","Genesis, fraction 0.25",0.9176811933597221,-0.22360402947223534,50
+Liu2024,30,"Genesis, variance projection","Genesis, fraction 0.25",0.9681445744572,-0.2789832944630034,50
+Liu2024,31,Tangent space + LR,"Genesis, fraction 0.25",0.2353722970755992,0.11172942309099626,50
+Liu2024,32,CSP + LDA,"Genesis, fraction 0.50",0.2605340847217651,0.10718346965129841,50
+Liu2024,33,Correlation dimension + LDA,"Genesis, fraction 0.50",0.24309693695368928,0.0971904237990335,50
+Liu2024,34,Genesis,"Genesis, fraction 0.50",0.14035177118972175,0.1147767881828423,50
+Liu2024,35,"Genesis, fraction 0.25","Genesis, fraction 0.50",0.09581316995294348,0.21135832972796556,50
+Liu2024,36,"Genesis, fraction 0.50","Genesis, fraction 0.50",0.0,0.0,50
+Liu2024,37,"Genesis, no projection","Genesis, fraction 0.50",0.6242030201792287,-0.08718101185816919,50
+Liu2024,38,"Genesis, variance projection","Genesis, fraction 0.50",0.878613482539465,-0.17743392417177667,50
+Liu2024,39,Tangent space + LR,"Genesis, fraction 0.50",0.17230586398047015,0.15338066540284753,50
+Liu2024,40,CSP + LDA,"Genesis, no projection",0.20448954354640725,0.14453441505157427,50
+Liu2024,41,Correlation dimension + LDA,"Genesis, no projection",0.2016540219596386,0.13052707819016082,50
+Liu2024,42,Genesis,"Genesis, no projection",0.2014219862322717,0.1478232283276345,50
+Liu2024,43,"Genesis, fraction 0.25","Genesis, no projection",0.08231880664027791,0.22360402947223534,50
+Liu2024,44,"Genesis, fraction 0.50","Genesis, no projection",0.3757969798207713,0.08718101185816919,50
+Liu2024,45,"Genesis, no projection","Genesis, no projection",0.0,0.0,50
+Liu2024,46,"Genesis, variance projection","Genesis, no projection",0.9130552592204186,-0.20792192876172153,50
+Liu2024,47,Tangent space + LR,"Genesis, no projection",0.1637712548867803,0.19609052759609108,50
+Liu2024,48,CSP + LDA,"Genesis, variance projection",0.1005261104749714,0.18426683701390012,50
+Liu2024,49,Correlation dimension + LDA,"Genesis, variance projection",0.10141232967446995,0.17378078205429526,50
+Liu2024,50,Genesis,"Genesis, variance projection",0.10470171768896308,0.21849527100422889,50
+Liu2024,51,"Genesis, fraction 0.25","Genesis, variance projection",0.031855425542800006,0.2789832944630034,50
+Liu2024,52,"Genesis, fraction 0.50","Genesis, variance projection",0.12138651746053497,0.17743392417177667,50
+Liu2024,53,"Genesis, no projection","Genesis, variance projection",0.08694474077958136,0.20792192876172153,50
+Liu2024,54,"Genesis, variance projection","Genesis, variance projection",0.0,0.0,50
+Liu2024,55,Tangent space + LR,"Genesis, variance projection",0.12008235075718948,0.23004755057623671,50
+Liu2024,56,CSP + LDA,Tangent space + LR,0.7616277859536338,-0.11058039151643667,50
+Liu2024,57,Correlation dimension + LDA,Tangent space + LR,0.575251324407986,-0.06519800625248547,50
+Liu2024,58,Genesis,Tangent space + LR,0.8062499205773137,-0.1381481657674369,50
+Liu2024,59,"Genesis, fraction 0.25",Tangent space + LR,0.7646277029244009,-0.11172942309099626,50
+Liu2024,60,"Genesis, fraction 0.50",Tangent space + LR,0.8276941360195298,-0.15338066540284753,50
+Liu2024,61,"Genesis, no projection",Tangent space + LR,0.8362287451132198,-0.19609052759609108,50
+Liu2024,62,"Genesis, variance projection",Tangent space + LR,0.8799176492428105,-0.23004755057623671,50
+Liu2024,63,Tangent space + LR,Tangent space + LR,0.0,0.0,50
+BNCI2014-001,0,CSP + LDA,CSP + LDA,0.998046875,0.0,9
+BNCI2014-001,1,Correlation dimension + LDA,CSP + LDA,0.998046875,-2.1703943553980403,9
+BNCI2014-001,2,Genesis,CSP + LDA,0.998046875,-1.7244131991083198,9
+BNCI2014-001,3,"Genesis, fraction 0.25",CSP + LDA,0.998046875,-1.5649305126147446,9
+BNCI2014-001,4,"Genesis, fraction 0.50",CSP + LDA,0.998046875,-1.6856729837235023,9
+BNCI2014-001,5,"Genesis, no projection",CSP + LDA,0.998046875,-2.016721603025912,9
+BNCI2014-001,6,"Genesis, variance projection",CSP + LDA,0.998046875,-2.2655546214900504,9
+BNCI2014-001,7,Tangent space + LR,CSP + LDA,0.001953125,0.9455224367003574,9
+BNCI2014-001,8,CSP + LDA,Correlation dimension + LDA,0.001953125,2.1703943553980403,9
+BNCI2014-001,9,Correlation dimension + LDA,Correlation dimension + LDA,0.998046875,0.0,9
+BNCI2014-001,10,Genesis,Correlation dimension + LDA,0.177734375,0.3406376365114892,9
+BNCI2014-001,11,"Genesis, fraction 0.25",Correlation dimension + LDA,0.130859375,0.41347658885649663,9
+BNCI2014-001,12,"Genesis, fraction 0.50",Correlation dimension + LDA,0.154296875,0.4049805041920487,9
+BNCI2014-001,13,"Genesis, no projection",Correlation dimension + LDA,0.154296875,0.3787748037247215,9
+BNCI2014-001,14,"Genesis, variance projection",Correlation dimension + LDA,0.173828125,0.34954970130098956,9
+BNCI2014-001,15,Tangent space + LR,Correlation dimension + LDA,0.001953125,2.660479636194884,9
+BNCI2014-001,16,CSP + LDA,Genesis,0.001953125,1.7244131991083198,9
+BNCI2014-001,17,Correlation dimension + LDA,Genesis,0.82421875,-0.3406376365114892,9
+BNCI2014-001,18,Genesis,Genesis,0.998046875,0.0,9
+BNCI2014-001,19,"Genesis, fraction 0.25",Genesis,0.2109375,0.26362705871153375,9
+BNCI2014-001,20,"Genesis, fraction 0.50",Genesis,0.154296875,0.36045289354254767,9
+BNCI2014-001,21,"Genesis, no projection",Genesis,0.4609375,0.03907216010146463,9
+BNCI2014-001,22,"Genesis, variance projection",Genesis,0.72265625,-0.19259608034968725,9
+BNCI2014-001,23,Tangent space + LR,Genesis,0.001953125,1.9302766428500744,9
+BNCI2014-001,24,CSP + LDA,"Genesis, fraction 0.25",0.001953125,1.5649305126147446,9
+BNCI2014-001,25,Correlation dimension + LDA,"Genesis, fraction 0.25",0.87109375,-0.41347658885649663,9
+BNCI2014-001,26,Genesis,"Genesis, fraction 0.25",0.791015625,-0.26362705871153375,9
+BNCI2014-001,27,"Genesis, fraction 0.25","Genesis, fraction 0.25",0.998046875,0.0,9
+BNCI2014-001,28,"Genesis, fraction 0.50","Genesis, fraction 0.25",0.4921875,0.005035112880274458,9
+BNCI2014-001,29,"Genesis, no projection","Genesis, fraction 0.25",0.630859375,-0.11658498230082542,9
+BNCI2014-001,30,"Genesis, variance projection","Genesis, fraction 0.25",0.8046875,-0.27915787063642633,9
+BNCI2014-001,31,Tangent space + LR,"Genesis, fraction 0.25",0.001953125,1.8108029918015174,9
+BNCI2014-001,32,CSP + LDA,"Genesis, fraction 0.50",0.001953125,1.6856729837235023,9
+BNCI2014-001,33,Correlation dimension + LDA,"Genesis, fraction 0.50",0.84765625,-0.4049805041920487,9
+BNCI2014-001,34,Genesis,"Genesis, fraction 0.50",0.84765625,-0.36045289354254767,9
+BNCI2014-001,35,"Genesis, fraction 0.25","Genesis, fraction 0.50",0.509765625,-0.005035112880274458,9
+BNCI2014-001,36,"Genesis, fraction 0.50","Genesis, fraction 0.50",0.998046875,0.0,9
+BNCI2014-001,37,"Genesis, no projection","Genesis, fraction 0.50",0.697265625,-0.16334088304288924,9
+BNCI2014-001,38,"Genesis, variance projection","Genesis, fraction 0.50",0.822265625,-0.31641984711512616,9
+BNCI2014-001,39,Tangent space + LR,"Genesis, fraction 0.50",0.001953125,1.8937743568573708,9
+BNCI2014-001,40,CSP + LDA,"Genesis, no projection",0.001953125,2.016721603025912,9
+BNCI2014-001,41,Correlation dimension + LDA,"Genesis, no projection",0.84765625,-0.3787748037247215,9
+BNCI2014-001,42,Genesis,"Genesis, no projection",0.541015625,-0.03907216010146463,9
+BNCI2014-001,43,"Genesis, fraction 0.25","Genesis, no projection",0.37109375,0.11658498230082542,9
+BNCI2014-001,44,"Genesis, fraction 0.50","Genesis, no projection",0.3046875,0.16334088304288924,9
+BNCI2014-001,45,"Genesis, no projection","Genesis, no projection",0.998046875,0.0,9
+BNCI2014-001,46,"Genesis, variance projection","Genesis, no projection",0.814453125,-0.3074065275014797,9
+BNCI2014-001,47,Tangent space + LR,"Genesis, no projection",0.001953125,2.2241714010024913,9
+BNCI2014-001,48,CSP + LDA,"Genesis, variance projection",0.001953125,2.2655546214900504,9
+BNCI2014-001,49,Correlation dimension + LDA,"Genesis, variance projection",0.828125,-0.34954970130098956,9
+BNCI2014-001,50,Genesis,"Genesis, variance projection",0.279296875,0.19259608034968725,9
+BNCI2014-001,51,"Genesis, fraction 0.25","Genesis, variance projection",0.197265625,0.27915787063642633,9
+BNCI2014-001,52,"Genesis, fraction 0.50","Genesis, variance projection",0.1796875,0.31641984711512616,9
+BNCI2014-001,53,"Genesis, no projection","Genesis, variance projection",0.1875,0.3074065275014797,9
+BNCI2014-001,54,"Genesis, variance projection","Genesis, variance projection",0.998046875,0.0,9
+BNCI2014-001,55,Tangent space + LR,"Genesis, variance projection",0.001953125,2.537239458679296,9
+BNCI2014-001,56,CSP + LDA,Tangent space + LR,0.998046875,-0.9455224367003574,9
+BNCI2014-001,57,Correlation dimension + LDA,Tangent space + LR,0.998046875,-2.660479636194884,9
+BNCI2014-001,58,Genesis,Tangent space + LR,0.998046875,-1.9302766428500744,9
+BNCI2014-001,59,"Genesis, fraction 0.25",Tangent space + LR,0.998046875,-1.8108029918015174,9
+BNCI2014-001,60,"Genesis, fraction 0.50",Tangent space + LR,0.998046875,-1.8937743568573708,9
+BNCI2014-001,61,"Genesis, no projection",Tangent space + LR,0.998046875,-2.2241714010024913,9
+BNCI2014-001,62,"Genesis, variance projection",Tangent space + LR,0.998046875,-2.537239458679296,9
+BNCI2014-001,63,Tangent space + LR,Tangent space + LR,0.998046875,0.0,9
