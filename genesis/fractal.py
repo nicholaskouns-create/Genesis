@@ -13,8 +13,8 @@ signature of one trial is the vector of fractal measures of every EEG channel in
 Bands: mu 8-13 Hz and beta 13-30 Hz (the rhythms that desynchronise during motor imagery) and the
 paradigm's own broad band. The correlation dimension is computed on the broad band only.
 
-The transform is stateless, so every trial's signature is computed once per process and cached:
-the Genesis variants in one benchmark run share it.
+Each trial's raw signature is computed once per process and cached.
+Each fitted transformer learns imputation values only from its own training epochs.
 """
 from __future__ import annotations
 
@@ -26,6 +26,7 @@ from joblib import Parallel, delayed
 from scipy.signal import butter, sosfiltfilt
 from scipy.spatial.distance import pdist
 from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.utils.validation import check_is_fitted
 
 BANDS = {"mu": (8.0, 13.0), "beta": (13.0, 30.0), "broad": None}
 BAND_MEASURES = ("higuchi", "katz", "petrosian", "dfa")
@@ -99,7 +100,14 @@ class FractalIntentSignature(BaseEstimator, TransformerMixin):
         self.n_jobs = n_jobs
 
     def fit(self, X, y=None):
+        features = self._raw_features(X)
+        self.fill_values_ = np.ma.median(np.ma.masked_invalid(features), axis=0).filled(0.0)
         return self
+
+    def transform(self, X):
+        check_is_fitted(self, "fill_values_")
+        features = self._raw_features(X)
+        return np.where(np.isfinite(features), features, self.fill_values_)
 
     def _columns(self, n_channels: int) -> np.ndarray:
         cols, k = [], 0
@@ -114,7 +122,7 @@ class FractalIntentSignature(BaseEstimator, TransformerMixin):
             raise ValueError("FractalIntentSignature: no measure/band selected")
         return np.asarray(cols)
 
-    def transform(self, X):
+    def _raw_features(self, X):
         X = np.asarray(X, float)
         keys = [(self.sfreq, hashlib.blake2b(np.ascontiguousarray(t).tobytes(), digest_size=16).hexdigest()) for t in X]
         todo = [i for i, k in enumerate(keys) if k not in _CACHE]
@@ -123,10 +131,4 @@ class FractalIntentSignature(BaseEstimator, TransformerMixin):
             for i, s in zip(todo, sigs):
                 _CACHE[keys[i]] = s
         full = np.stack([_CACHE[k] for k in keys])
-        F = full[:, self._columns(X.shape[1])]
-        # a flat or broken channel can make a measure undefined; replace by the column median
-        bad = ~np.isfinite(F)
-        if bad.any():
-            med = np.nanmedian(np.where(bad, np.nan, F), axis=0)
-            F[bad] = np.take(np.nan_to_num(med), np.nonzero(bad)[1])
-        return F
+        return full[:, self._columns(X.shape[1])]

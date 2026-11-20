@@ -141,3 +141,13 @@ def test_followup_end_to_end_without_download(tmp_path):
     assert [c["title"][:2] for c in comps] == ["H4", "H5"]
     assert all(len(c["ci95"]) == 2 for c in comps)
     assert (tmp_path / "summary.md").read_text().startswith("# Does fractal shape add anything")
+
+
+def test_fractal_imputation_uses_only_training_values(monkeypatch):
+    estimator = FractalIntentSignature()
+    monkeypatch.setattr(estimator, "_raw_features", lambda features: np.asarray(features))
+    estimator.fit([[1.0, np.nan], [3.0, np.inf]])
+    alone = estimator.transform([[np.nan, np.nan]])
+    with_other_test_epoch = estimator.transform([[np.nan, np.nan], [99.0, 75.0]])
+    np.testing.assert_array_equal(alone, [[2.0, 0.0]])
+    np.testing.assert_array_equal(with_other_test_epoch[0], alone[0])
